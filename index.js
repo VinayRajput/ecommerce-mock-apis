@@ -48,18 +48,19 @@ const proxy = {
     // The default GET request.
     // https://github.com/jaywcjlove/mocker-api/pull/63
     '/api/mens/kurta':mens_kurta,
-    '/api/mens/kurta/:page':mens_kurta1,
+    '/api/mens/kurta/1':mens_kurta1,
     '/api/mens/jeans':mens_jeans,
     '/api/mens/shirt':mens_shirt,
     '/api/mens/pants':mens_pants,
     '/api/womens/gouns':womens_gouns,
     '/api/womens/lenga-choli':womens_lenga_choli,
-    // '/api/womens/lenga-choli?page=1':womens_lenga_choli1,
-    // '/api/womens/lenga-choli?page=2':womens_lenga_choli2,
+    '/api/womens/lenga-choli/1':womens_lenga_choli1,
+    '/api/womens/lenga-choli/2':womens_lenga_choli2,
     '/api/womens/mix_dress':womens_mix_dress,
     '/api/womens/saree':womens_saree,
     '/api/womens/dress':womens_dress,
     '/api/womens/jeans':womens_jeans,
+    '/api/womens/top':womens_top,
     '/api/user': {
         id: 1,
         username: 'kenny',
@@ -117,7 +118,7 @@ const proxy = {
     'DELETE /api/user/:id': (req, res) => {
         console.log('---->', req.body)
         console.log('---->', req.params.id)
-        res.send({ status: 'ok', message: '删除成功！' });
+        res.send({ status: 'ok', message: '' });
     }
 }
 module.exports = proxy;
