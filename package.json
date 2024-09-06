@@ -5,10 +5,11 @@
   "name": "ecommerce-mock-apis",
   "version": "0.0.1",
   "description": "Mock APIs for Ecommerce Project",
-  "main": "index.js",
+  "main": "setup/index.js",
   "dependencies": {
   },
   "scripts": {
+    "start": "mocker setup/index.js --host localhost --port 8000",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Vinay Rajput",

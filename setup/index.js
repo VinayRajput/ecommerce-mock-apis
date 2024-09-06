@@ -7,7 +7,7 @@ const mens_pants = require("./data/men/men_pants.json");
 const womens_gouns = require("./data/women/gouns.json");
 const womens_lenga_choli = require("./data/women/lenghaCholi.json");
 const womens_lenga_choli1 = require("./data/women/lenghaCholi1.json");
-const womens_lenga_choli2 = require("./data/women/LenghaCholi2.json");
+const womens_lenga_choli2 = require("./data/women/lenghaCholi2.json");
 const womens_mix_dress = require("./data/women/mixDress.json");
 const womens_saree = require("./data/women/saree.json");
 const womens_dress = require("./data/women/women_dress.json");
@@ -47,21 +47,21 @@ const proxy = {
     // =====================
     // The default GET request.
     // https://github.com/jaywcjlove/mocker-api/pull/63
-    '/api/mens/kurta':mens_kurta,
-    '/api/mens/kurta/1':mens_kurta1,
-    '/api/mens/jeans':mens_jeans,
-    '/api/mens/shirt':mens_shirt,
-    '/api/mens/pants':mens_pants,
-    '/api/womens/gouns':womens_gouns,
-    '/api/womens/lenga-choli':womens_lenga_choli,
-    '/api/womens/lenga-choli/1':womens_lenga_choli1,
-    '/api/womens/lenga-choli/2':womens_lenga_choli2,
-    '/api/womens/mix_dress':womens_mix_dress,
-    '/api/womens/saree':womens_saree,
-    '/api/womens/dress':womens_dress,
-    '/api/womens/jeans':womens_jeans,
-    '/api/womens/top':womens_top,
-    '/api/user': {
+    'GET /api/mens/kurta':mens_kurta,
+    'GET /api/mens/kurta/1':mens_kurta1,
+    'GET /api/mens/jeans':mens_jeans,
+    'GET /api/mens/shirt':mens_shirt,
+    'GET /api/mens/pants':mens_pants,
+    'GET /api/womens/gouns':womens_gouns,
+    'GET /api/womens/lenga-choli':womens_lenga_choli,
+    'GET /api/womens/lenga-choli/1':womens_lenga_choli1,
+    'GET /api/womens/lenga-choli/2':womens_lenga_choli2,
+    'GET /api/womens/mix_dress':womens_mix_dress,
+    'GET /api/womens/saree':womens_saree,
+    'GET /api/womens/dress':womens_dress,
+    'GET /api/womens/jeans':womens_jeans,
+    'GET /api/womens/top':womens_top,
+    /*'/api/user': {
         id: 1,
         username: 'kenny',
         sex: 6
@@ -81,8 +81,8 @@ const proxy = {
             username: 'kenny',
             sex: 6
         }
-    ],
-    'GET /api/:owner/:repo/raw/:ref/(.*)': (req, res) => {
+    ],*/
+    /*'GET /api/:owner/:repo/raw/:ref/(.*)': (req, res) => {
         const { owner, repo, ref } = req.params;
         // http://localhost:8081/api/admin/webpack-mock-api/raw/master/add/ddd.md
         // owner => admin
@@ -119,6 +119,6 @@ const proxy = {
         console.log('---->', req.body)
         console.log('---->', req.params.id)
         res.send({ status: 'ok', message: '' });
-    }
+    }*/
 }
 module.exports = proxy;
