@@ -13,6 +13,7 @@ const womens_saree = require("./data/women/saree.json");
 const womens_dress = require("./data/women/women_dress.json");
 const womens_jeans = require("./data/women/women_jeans.json");
 const womens_top = require("./data/women/women_top.json");
+const shoes = require("./data/shoes.json");
 
 const proxy = {
     // Priority processing.
@@ -47,20 +48,22 @@ const proxy = {
     // =====================
     // The default GET request.
     // https://github.com/jaywcjlove/mocker-api/pull/63
-    'GET /api/mens/kurta':mens_kurta,
-    'GET /api/mens/kurta/1':mens_kurta1,
-    'GET /api/mens/jeans':mens_jeans,
-    'GET /api/mens/shirt':mens_shirt,
-    'GET /api/mens/pants':mens_pants,
-    'GET /api/womens/gouns':womens_gouns,
-    'GET /api/womens/lenga-choli':womens_lenga_choli,
-    'GET /api/womens/lenga-choli/1':womens_lenga_choli1,
-    'GET /api/womens/lenga-choli/2':womens_lenga_choli2,
-    'GET /api/womens/mix_dress':womens_mix_dress,
-    'GET /api/womens/saree':womens_saree,
-    'GET /api/womens/dress':womens_dress,
-    'GET /api/womens/jeans':womens_jeans,
-    'GET /api/womens/top':womens_top,
+    'GET /api/mens/kurta': {data:mens_kurta},
+    'GET /api/mens/kurta/1': {data:mens_kurta1},
+    'GET /api/mens/jeans':{data:mens_jeans},
+    '/api/mens/shirt': {data:mens_shirt.slice(0,10)},
+    'GET /api/mens/pants': {data:mens_pants},
+    'GET /api/womens/gouns': {data:womens_gouns},
+    'GET /api/womens/lenga-choli': {data:womens_lenga_choli},
+    'GET /api/womens/lenga-choli/1': {data:womens_lenga_choli1},
+    'GET /api/womens/lenga-choli/2': {data:womens_lenga_choli2},
+    'GET /api/womens/mix_dress': {data:womens_mix_dress},
+    'GET /api/womens/saree': {data:womens_saree},
+    'GET /api/womens/dress': {data:womens_dress},
+    'GET /api/womens/jeans': {data:womens_jeans},
+    'GET /api/womens/top': {data:womens_top},
+    'GET /api/shoes':{data:shoes},
+
     /*'/api/user': {
         id: 1,
         username: 'kenny',
